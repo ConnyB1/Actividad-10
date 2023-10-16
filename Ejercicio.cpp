@@ -1,6 +1,6 @@
 //Cesar Alejandro Velazquez Mercado
 //372329
-//Me 
+//Me guarda loso datos de un alumno
 //15/10/2023
 #include <stdio.h>
 #include <stdlib.h>
@@ -130,11 +130,8 @@ void agregarManual(res alum[], int *n)
         alum[*n].edad = valinum(0, 120);
 
         printf("Ingrese el sexo (M/F): ");
-        do {
-        alum[*n].sexo = toupper(getchar()); 
-        } while (alum[*n].sexo != 'M' && alum[*n].sexo != 'F');
+        alum[*n].sexo = getchar();
         getchar();
-
 
         (*n)++;
     }
