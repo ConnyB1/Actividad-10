@@ -130,8 +130,11 @@ void agregarManual(res alum[], int *n)
         alum[*n].edad = valinum(0, 120);
 
         printf("Ingrese el sexo (M/F): ");
-        alum[*n].sexo = getchar();
+        do {
+        alum[*n].sexo = toupper(getchar()); 
+        } while (alum[*n].sexo != 'M' && alum[*n].sexo != 'F');
         getchar();
+
 
         (*n)++;
     }
